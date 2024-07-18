@@ -29,6 +29,9 @@ During deserialization, the byte stream is read, and the object is reconstructed
 
 It's important to note that not all objects are serializable by default. Classes must explicitly implement the Serializable interface to enable their instances to be serialized. Additionally, developers have control over the serialization process through methods such as `writeObject()` and `readObject()`, allowing for customization of how objects are serialized and deserialized.
 
+#### JSON with YAsson's JsonbBuilder
+YAsson's JsonbBuilder provides a straightforward API for JSON binding, leveraging annotations to map Java objects to JSON and JSON to Java objects. This integration enhances the serialization and deserialization mechanism by offering a more readable and structured format, especially beneficial for web APIs and data storage.
+
 ## Summary
 
 serialization and deserialization in Java provide a powerful mechanism for persisting object states and facilitating communication between distributed components. Understanding and effectively utilizing these processes is essential for developing robust, scalable, and efficient Java applications.
