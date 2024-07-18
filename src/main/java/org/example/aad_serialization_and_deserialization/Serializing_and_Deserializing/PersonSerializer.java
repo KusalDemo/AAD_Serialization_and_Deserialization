@@ -12,18 +12,18 @@ public class PersonSerializer {
         try{
             Person person = new Person("Kamal", "GDSE", 21);
 
-            FileOutputStream fileOutputStream = new FileOutputStream("C:\\Users\\kusal\\OneDrive\\Desktop\\Serialized_Objects\\person.ser");
+            FileOutputStream fileOutputStream = new FileOutputStream("C:\\Users\\kusal\\OneDrive\\Desktop\\Serialized_Objects\\person.txt");
             ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
             objectOutputStream.writeObject(person);
             objectOutputStream.close();
             fileOutputStream.close();
-            System.out.println("Person stored in Desktop\\Serialized_Objects\\person.ser");
+            System.out.println("Person stored in Desktop\\Serialized_Objects\\person.txt");
         }catch (Exception e){
             e.printStackTrace();
         }
 
         try {
-            FileInputStream fileInputStream = new FileInputStream("C:\\Users\\kusal\\OneDrive\\Desktop\\Serialized_Objects\\person.ser");
+            FileInputStream fileInputStream = new FileInputStream("C:\\Users\\kusal\\OneDrive\\Desktop\\Serialized_Objects\\person.txt");
             ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
             Person person =(Person) objectInputStream.readObject();
             objectInputStream.close();
@@ -32,6 +32,9 @@ public class PersonSerializer {
         }catch (Exception e){
             e.printStackTrace();
         }
+
+
+
     }
 
 
